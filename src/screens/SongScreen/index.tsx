@@ -55,10 +55,6 @@ export default function SongScreen(props: any) {
             padding: 0;
             margin: 0;
         }
-        
-        body {
-            display: flex;
-        }
 
         .container {
             font-family:  monospace;
