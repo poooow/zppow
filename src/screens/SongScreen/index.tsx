@@ -63,6 +63,7 @@ export default function SongScreen(props: any) {
             padding: 1rem;
             flex-grow: 1;
             font-weight: 700;
+            min-height: 100vh;
         }
 
         .row {
