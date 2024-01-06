@@ -1,6 +1,6 @@
 import { enablePromise, openDatabase, SQLiteDatabase } from 'react-native-sqlite-storage';
 const parseString = require('react-native-xml2js').parseString;
-const XML_URL = 'https://raw.githubusercontent.com/poooow/zp-pow/master/inet.xml';
+const XML_URL = 'https://raw.githubusercontent.com/poooow/zppow/main/inet.xml';
 enablePromise(true);
 
 export const getDBConnection = async () => {
