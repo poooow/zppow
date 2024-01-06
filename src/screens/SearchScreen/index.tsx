@@ -132,7 +132,7 @@ export default function SearchScreen(props: { navigation: { navigate: (arg0: str
             />
           </View>
           : null}
-        {state.appState === '' && state.dbExists ?
+        {state.appState === '' && state.dbExists && !state.songList.length ?
           <>
             <View style={styles.stateContainer}>
               <ArrowUpIcon width="100" height="100" />
