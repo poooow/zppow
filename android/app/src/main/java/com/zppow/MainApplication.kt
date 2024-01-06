@@ -1,4 +1,4 @@
-package com.zppow
+package cz.samius.zpevnik
 
 import android.app.Application
 import com.facebook.react.PackageList
