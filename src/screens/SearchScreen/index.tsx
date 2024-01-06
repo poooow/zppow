@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FlatList, Text, View, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { FlatList, Text, View, StyleSheet, TextInput, TouchableOpacity, Appearance } from 'react-native';
 import styles from '../../styles/styles.js';
 import HTMLView from 'react-native-htmlview';
 import { MenuProvider, Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu';
@@ -24,7 +24,7 @@ export default function SearchScreen(props: { navigation: { navigate: (arg0: str
     dbExists: false,
     songList: [],
     appState: '',
-    darkMode: false,
+    darkMode: Appearance.getColorScheme() === 'dark',
     keepAwake: false
   })
 
