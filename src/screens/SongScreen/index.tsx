@@ -48,9 +48,10 @@ export default function SongScreen(props: any) {
    * @returns {string}
    */
   const transposeHTML = (_: any, chord: string) => {
-    return (
-      <span className="chord">{transpose(chord, state.transposition)}</span>
-    );
+    return `<span class="chord">${transpose(
+      chord,
+      state.transposition,
+    )}</span>`;
   };
 
   /**
@@ -123,6 +124,8 @@ export default function SongScreen(props: any) {
         }
         </style>`;
 
+    //console.log(state.song.text);
+
     const bodyHTML = state.song.text
       .replace(/(.+)/g, '<div class="row">$1&nbsp;</div>')
       .replace(
@@ -148,6 +151,8 @@ export default function SongScreen(props: any) {
         /(\.|=)(R[0-9]{0,2}|Ref|Rf|\*|[0-9]{1,2})(\.:|\.|:)/g,
         '<span class="verseNumber">$2</span>',
       );
+
+    console.log(bodyHTML);
 
     const resultHTML =
       '<meta name="viewport" content="width=device-width, initial-scale=1">' +
