@@ -15,6 +15,10 @@ cd android
 
 Output: android\app\build\outputs\apk\debug\app-debug.apk
 
+If not rebuilding:
+
+```npm run bundle-android```
+
 ## Build aab
 
 ```
