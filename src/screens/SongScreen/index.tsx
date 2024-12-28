@@ -109,7 +109,7 @@ export default function SongScreen(props: any) {
         </style>`;
 
     const styleHTMLDark = `<style type="text/css">
-        .container {
+        :root {
             background-color: #000000;
             color: #ffffff;
         }
@@ -123,8 +123,6 @@ export default function SongScreen(props: any) {
             background-color: #000000;
         }
         </style>`;
-
-    //console.log(state.song.text);
 
     const bodyHTML = state.song.text
       .replace(/(.+)/g, '<div class="row">$1&nbsp;</div>')
@@ -151,8 +149,6 @@ export default function SongScreen(props: any) {
         /(\.|=)(R[0-9]{0,2}|Ref|Rf|\*|[0-9]{1,2})(\.:|\.|:)/g,
         '<span class="verseNumber">$2</span>',
       );
-
-    console.log(bodyHTML);
 
     const resultHTML =
       '<meta name="viewport" content="width=device-width, initial-scale=1">' +
@@ -231,7 +227,12 @@ export default function SongScreen(props: any) {
       <WebView
         originWhitelist={['*']}
         source={{html: state.song.html}}
-        style={{width: '100%', resizeMode: 'cover', flex: 1}}
+        style={{
+          width: '100%',
+          resizeMode: 'cover',
+          flex: 1,
+          color: state.darkMode ? '#fff' : '#000',
+        }}
       />
     </View>
   );
